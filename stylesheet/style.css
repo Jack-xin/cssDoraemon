@@ -1,0 +1,587 @@
+@charset "utf-8";
+
+/* CSS Document */
+
+body {                                                   /*设置背景图片及向下滚动动画*/
+    background: url(../images/cloud.jpg);
+    background-repeat: repeat;
+    background-attachment: fixed;
+    animation: background_running 100s linear infinite;
+}
+
+.container {                                            /*设置最外层容器样式*/
+    width: 336px;
+    height: 416px;
+    /*border: 1px solid #000;*/
+    margin: 100px auto;
+    position: relative;
+}
+
+.header {                                               /*设置头部容器样式*/
+    width: 180px;
+    height: 170px;
+    /*border: 1px solid #000;*/
+    position: absolute;
+    top: 100px;
+    left: 50%;
+    margin-left: -90px;
+}
+
+.header .head {                                         /*设置头部样式*/
+    display: inline-block;
+    width: 180px;
+    height: 170px;
+    background-color: #0F71D9;
+    border-radius: 50%;
+}
+
+.header .mouth_back {                                  /*设置嘴巴白色部分样式*/
+    display: inline-block;
+    width: 140px;
+    height: 115px;
+    background-color: #fff;
+    border-radius: 50%;
+    /* z-index: 1; */
+    position: absolute;
+    top: 54px;
+    left: 50%;
+    margin-left: -70px;
+}
+
+.header .left_eye {                                    /*设置左眼样式*/
+    display: inline-block;
+    width: 45px;
+    height: 55px;
+    background-color: #fff;
+    border-radius: 53% 48%;
+    position: absolute;
+    left: 47px;
+    top: 32px;
+    /* border: 1px solid #000; */
+    /*z-index: 1;*/
+}
+
+.left_eye .inner_eye_left {                           /*设置左眼黑色眼珠样式*/
+    display: inline-block;
+    width: 23px;
+    height: 30px;
+    background-color: #000;
+    border-radius: 61% 53%;
+    position: absolute;
+    left: 14px;
+    top: 10px;
+    z-index: 1;
+}
+
+.left_eye .inner_eye_left::after {                   /*设置左眼黑色眼珠内白色小圆圈样式*/
+    display: inline-block;
+    content: "";
+    width: 8px;
+    height: 12px;
+    background-color: #fff;
+    border-radius: 70% 53%;
+    position: relative;
+    left: 11px;
+    top: 5px;
+}
+
+.header .right_eye {                                /*设置右眼样式*/
+    display: inline-block;
+    width: 45px;
+    height: 55px;
+    background-color: #fff;
+    border-radius: 48% 53%;
+    position: absolute;
+    left: 87px;
+    top: 32px;
+    /* border: 1px solid #000; */
+    /*z-index: 1;*/
+}
+
+.right_eye .inner_eye_right {                       /*设置右眼黑色眼珠样式*/
+    display: inline-block;
+    width: 23px;
+    height: 30px;
+    background-color: #000;
+    border-radius: 59% 63%;
+    position: absolute;
+    left: 8px;
+    top: 10px;
+    z-index: 1;
+}
+
+.right_eye .inner_eye_right::after {               /*设置右眼黑色眼珠内白色小圆圈样式*/
+    display: inline-block;
+    content: "";
+    width: 8px;
+    height: 12px;
+    background-color: #fff;
+    border-radius: 53% 62%;
+    position: relative;
+    left: 3px;
+    top: 5px;
+}
+
+.header .nose {                                    /*设置鼻子样式*/
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    background-color: #FF0000;
+    border-radius: 50%;
+    box-shadow: 0 0 6px #F59E1E inset;
+    position: absolute;
+    top: 83px;
+    left: 79px;
+}
+
+.header .nose::after {                             /*设置鼻子底下黑色支撑柱样式*/                          
+    display: inline-block;
+    content: "";
+    width: 3px;
+    height: 46px;
+    background-color: #000;
+    position: absolute;
+    top: 20px;
+    left: 9px;
+}
+
+.header .mouth {                                   /*设置嘴巴样式*/
+    display: inline-block;
+    width: 140px;
+    height: 140px;
+    border: 3px solid;
+    border-top-color: transparent;
+    border-left-color: transparent;
+    border-right-color: transparent;
+    border-radius: 50% 50%;
+    position: absolute;
+    top: 3px;
+    left: 17px;
+}
+
+.mouth .mustache_1 {                              /*设置1-6的胡子样式*/
+    display: inline-block;
+    content: "";
+    width: 2px;
+    height: 46px;
+    background-color: #000;
+    position: absolute;
+    top: 62px;
+    left: 35px;
+    -webkit-transform: rotate(-55deg);
+    transform: rotate(-55deg);
+}
+
+.mouth .mustache_2 {
+    display: inline-block;
+    content: "";
+    width: 2px;
+    height: 46px;
+    background-color: #000;
+    position: absolute;
+    top: 78px;
+    left: 28px;
+    -webkit-transform: rotate(-80deg);
+    transform: rotate(-80deg);
+}
+
+.mouth .mustache_3 {
+    display: inline-block;
+    content: "";
+    width: 2px;
+    height: 46px;
+    background-color: #000;
+    position: absolute;
+    top: 95px;
+    left: 30px;
+    -webkit-transform: rotate(-106deg);
+    transform: rotate(-106deg);
+}
+
+.mouth .mustache_4 {
+    display: inline-block;
+    content: "";
+    width: 2px;
+    height: 46px;
+    background-color: #000;
+    position: absolute;
+    top: 62px;
+    left: 103px;
+    -webkit-transform: rotate(55deg);
+    transform: rotate(55deg);
+}
+
+.mouth .mustache_5 {
+    display: inline-block;
+    content: "";
+    width: 2px;
+    height: 46px;
+    background-color: #000;
+    position: absolute;
+    top: 78px;
+    left: 109px;
+    -webkit-transform: rotate(80deg);
+    transform: rotate(82deg);
+}
+
+.mouth .mustache_6 {
+    display: inline-block;
+    content: "";
+    width: 2px;
+    height: 46px;
+    background-color: #000;
+    position: absolute;
+    top: 95px;
+    left: 107px;
+    -webkit-transform: rotate(106deg);
+    transform: rotate(106deg);
+}
+
+.body {                                              /*设置上半身容器样式*/
+    height: 103px;
+    width: 180px;
+    /*border: 1px solid #000;*/
+    top: 270px;
+    left: 50%;
+    margin-left: -90px;
+    position: relative;
+}
+
+.body .physical_body {                               /*设置蓝色身体样式*/
+    display: inline-block;
+    width: 140px;
+    height: 142px;
+    background-color: #0F71D9;
+    border-radius: 39% 39%;
+    position: absolute;
+    left: 20px;
+    top: -39px;
+    z-index: -1;
+}
+
+.body .body_white {                                 /*设置蓝色身体内部白色部分样式*/ 
+    display: inline-block;
+    width: 110px;
+    height: 110px;
+    background-color: #fff;
+    border-radius: 45% 45%;
+    position: absolute;
+    left: 35px;
+    top: -39px;
+    z-index: -1;
+}
+
+.body .pocket {                                     /*设置口袋样式*/
+    display: inline-block;
+    width: 73px;
+    height: 42px;
+    border: 2px solid #000;
+    border-radius: 20% 20% 50% 50%;
+    position: absolute;
+    left: 52px;
+    top: 20px;
+}
+
+.body .red_rope {                                   /*设置红围巾样式*/
+    display: inline-block;
+    width: 152px;
+    height: 133px;
+    border: 8px solid #ff0000;
+    border-radius: 50% 50%;
+    border-top-color: transparent;
+    border-left-color: transparent;
+    border-right-color: transparent;
+    position: absolute;
+    left: 6px;
+    top: -141px;
+}
+
+.body .yellow_bell {                                /*设置黄色铃铛样式*/
+    display: inline-block;
+    width: 18px;
+    height: 18px;
+    background-color: #F6E612;
+    border-radius: 50% 50%;
+    position: absolute;
+    left: 80px;
+    top: 0px;
+}
+
+.yellow_bell::after {                               /*设置黄色铃铛内黑色线框样式*/                               
+    display: inline-block;
+    content: "";
+    width: 16px;
+    height: 2px;
+    border: 1px solid #000;
+    border-radius: 50% 50%;
+    position: absolute;
+    left: 0px;
+    top: 6px;
+}
+
+.foot {                                             /*设置下半身容器样式*/
+    width: 160px;
+    height: 39px;
+    /*border: 1px solid #000;*/
+    position: relative;
+    left: 50%;
+    top: 270px;
+    margin-left: -80px;
+}
+
+.foot .left_leg {                                   /*设置左腿样式*/
+    display: inline-block;
+    width: 60px;
+    height: 60px;
+    background-color: #0F71D9;
+    /* border: 2px solid #000; */
+    border-radius: 3% 28% 63% 15%;
+    -webkit-transform-origin: right top;
+    transform-origin: right top;
+    -webkit-transform: rotate(3deg);
+    transform: rotate(3deg);
+    position: absolute;
+    left: 24px;
+    top: -31px;
+}
+
+.foot .left_foot {                                 /*设置左脚样式*/
+    display: inline-block;
+    width: 52px;
+    height: 24px;
+    background-color: #fff;
+    border: 2px solid #000;
+    border-radius: 132% 132% 100% 100%;
+    position: absolute;
+    left: 17px;
+    top: 12px;
+}
+
+.foot .right_leg {                                 /*设置右腿样式*/
+    display: inline-block;
+    width: 60px;
+    height: 60px;
+    background-color: #0F71D9;
+    /* border: 2px solid #000; */
+    border-radius: 28% 3% 15% 63%;
+    -webkit-transform-origin: right top;
+    transform-origin: right top;
+    -webkit-transform: rotate(-3deg);
+    transform: rotate(-3deg);
+    position: absolute;
+    left: 76px;
+    top: -31px;
+}
+
+.foot .right_foot {                               /*设置右脚样式*/
+    display: inline-block;
+    width: 52px;
+    height: 24px;
+    background-color: #fff;
+    border: 2px solid #000;
+    border-radius: 132% 132% 100% 100%;
+    position: absolute;
+    left: 87px;
+    top: 12px;
+}
+
+.left_arm_box {                                   /*设置左胳膊容器样式*/
+    width: 100px;
+    height: 35px;
+    /* border: 1px solid #000; */
+    position: relative;
+    left: 10px;
+    top: 110px;
+    -webkit-transform-origin: right;
+    transform-origin: right;
+    -webkit-transform: rotatez(-52deg);
+    transform: rotatez(-52deg);
+    animation: left_arm_move 5s ease-in infinite;
+}
+
+.right_arm_box {                                   /*设置右胳膊容器样式*/
+    width: 100px;
+    height: 35px;
+    /* border: 1px solid #000; */
+    position: relative;
+    left: 126px;
+    top: 75px;
+    -webkit-transform-origin: right;
+    transform-origin: right;
+    -webkit-transform: rotatez(232deg);
+    transform: rotatez(232deg);
+    animation: right_arm_move 5s ease-in infinite;
+}
+
+.arm {                                             /*设置胳膊容器样式*/
+    display: inline-block;
+    width: 80px;
+    height: 31px;
+    background-color: #0F71D9;
+    border-radius: 42% 30% 55% 42%;
+    position: absolute;
+    left: 20px;
+    top: 2px;
+}
+
+.right_radius {                                    /*设置右胳膊旋转角度样式*/
+    border-radius: 42% 55% 30% 42%;
+}
+
+.hand {                                            /*设置手掌样式*/
+    display: inline-block;
+    width: 30px;
+    height: 30px;
+    background-color: #fff;
+    border: 2px solid #000;
+    border-radius: 50% 40% 39% 50%;
+    position: absolute;
+    left: 0px;
+    top: 1px;
+}
+
+.fly {                                             /*设置竹蜻蜓容器样式*/
+    width: 100px;
+    height: 100px;
+    /*border: 1px solid #000;*/
+    position: relative;
+    left: 50%;
+    margin-left: -50px;
+    top: -213px;
+    z-index: 1;
+}
+.fly .wing {                                       /*设置竹蜻蜓机翼容器样式*/
+    width: 80px;
+    height: 80px;
+    /*border: 1px solid #000;*/
+    position: absolute;
+    left: 8px;
+    top: 13px;
+    perspective: 200px;
+    transform-style: preserve-3d;
+    transform: rotatex(74deg);
+}
+
+.wing .wing_1 {                                    /*设置竹蜻蜓上机翼及旋转动画样式*/
+    display: inline-block;
+    width: 80px;
+    height: 5px;
+    background-color: #F61872;
+    border: 1px solid #000;
+    border-radius: 52%;
+    position: absolute;
+    left: 0px;
+    top: 37px;
+    -webkit-transform: rotatez(0deg);
+    transform: rotatez(0deg);
+    animation: wing1_running .5s linear infinite;
+}
+
+.wing .wing_2 {                                   /*设置竹蜻蜓下机翼及旋转动画样式样式*/
+    -webkit-transform: rotatez(-90deg);
+    transform: rotatez(-90deg);
+    animation: wing2_running .5s linear infinite;
+}
+.fly .stick {                                    /*设置竹蜻蜓机翼支撑物样式*/   
+    display: inline-block;
+    width: 5px;
+    height: 40px;
+    background-color: #f59e1e;
+    position: absolute;
+    left: 47px;
+    top: 53px;
+    z-index: -1;
+}
+
+.stick::after {                                 /*设置竹蜻蜓机翼支撑物下方与头部链接部分样式*/
+    display: inline-block;
+    content: "";
+    width: 20px;
+    height: 10px;
+    background-color: #f59e1e;
+    border-radius: 10px 10px 0 0;
+    position: absolute;
+    left: -7px;
+    top: 39px;
+}
+
+@keyframes background_running {                 /*背景图片滚动动画*/
+    0% {
+        -moz-background-position-y: 0px;
+        -webkit-background-position-y: 0px;
+        background-position-y: 0px;
+    }
+    100% {
+        -moz-background-position-y: 9999px;
+        -webkit-background-position-y: 9999px;
+        background-position-y: 9999px;
+    }
+}
+
+@keyframes wing1_running {                     /*竹蜻蜓上机翼旋转动画*/
+    0% {
+        -webkit-transform: rotatez(0deg);
+        transform: rotatez(0deg);
+    }
+    50% {
+        -webkit-transform: rotatez(180deg);
+        transform: rotatez(180deg);
+    }
+    100% {
+        -webkit-transform: rotatez(360deg);
+        transform: rotatez(360deg);
+    }
+}
+
+@keyframes wing2_running {                    /*竹蜻蜓下机翼旋转动画*/
+    0% {
+        -webkit-transform: rotatez(-90deg);
+        transform: rotatez(-90deg);
+    }
+    25% {
+        -webkit-transform: rotatez(0deg);
+        transform: rotatez(0deg);
+    }
+    50% {
+        -webkit-transform: rotatez(90deg);
+        transform: rotatez(90deg);
+    }
+    75% {
+        -webkit-transform: rotatez(180deg);
+        transform: rotatez(180deg);
+    }
+    100% {
+        -webkit-transform: rotatez(270deg);
+        transform: rotatez(270deg);
+    }
+}
+
+@keyframes left_arm_move {                   /*左胳膊旋转动画*/
+    0% {
+        -webkit-transform: rotatez(-52deg);
+        transform: rotatez(-52deg);
+    }
+    50% {
+        -webkit-transform: rotatez(40deg);
+        transform: rotatez(40deg);
+    }
+    100% {
+        -webkit-transform: rotatez(-52deg);
+        transform: rotatez(-52deg);
+    }
+}
+
+@keyframes right_arm_move {                  /*右胳膊旋转动画*/
+    0% {
+        -webkit-transform: rotatez(232deg);
+        transform: rotatez(232deg);
+    }
+    50% {
+        -webkit-transform: rotatez(136deg);
+        transform: rotatez(136deg);
+    }
+    100% {
+        -webkit-transform: rotatez(232deg);
+        transform: rotatez(232deg);
+    }
+}
